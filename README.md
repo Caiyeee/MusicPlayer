@@ -7,3 +7,6 @@
 ##### 本地录音：当前用户的录音文件
 #####
 ##### 录音结束后自动命名并保存，命名方式：原歌名 + “-record” + 用户id，例如“songName-record1”
+###
+###### Screentshots
+![Aaron Swartz](https://github.com/Caiyeee/MusicPlayer/screentshots/raw/pic1.png)
