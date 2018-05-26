@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="3"
+    android:background="@drawable/play_bg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/song"
+        android:text="song name - singer"
+        android:layout_gravity="center"
+        android:textColor="@color/Dark"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="18sp" />
+
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/play_page_default_cover"
+        android:layout_margin="20dp"
+        android:layout_gravity="center"
+        android:layout_weight="2"
+        android:id="@+id/pic"/>
+
+    <!--<TextView-->
+    <!--android:layout_width="300dp"-->
+    <!--android:layout_height="200dp"-->
+    <!--android:layout_margin="20dp"-->
+    <!--android:padding="20dp"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:textColor="@color/Dark"-->
+    <!--android:textSize="15sp"-->
+    <!--android:scrollbars="vertical"-->
+    <!--android:fadeScrollbars="false"-->
+    <!--android:layout_weight="2"-->
+    <!--android:id="@+id/lyrics"/>-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="播放中"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        android:textColor="@color/Dark"
+        android:id="@+id/status" />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:id="@+id/seekbar"
+        android:layout_margin="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="02:01"
+            android:textColor="@color/colorContent"
+            android:id="@+id/current"/>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_marginRight="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="05:20"
+                android:textColor="@color/colorContent"
+                android:textSize="12sp"
+                android:id="@+id/length"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:gravity="center">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="播放"
+            android:background="@color/colorTabLine"
+            android:textColor="@color/colorWhite"
+            android:textSize="15sp"
+            android:layout_margin="10dp"
+            android:id="@+id/playing"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/colorWhite"
+            android:text="录音"
+            android:background="@color/colorTabLine"
+            android:layout_margin="10dp"
+            android:id="@+id/recording"/>
+    </LinearLayout>
+</LinearLayout>

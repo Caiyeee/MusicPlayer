@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/login"
+            android:title="登陆/登出"
+            android:icon="@drawable/ic_menu_exit"/>
+        <item
+            android:id="@+id/message"
+            android:icon="@drawable/ic_menu_about"
+            android:title="我的信息" />
+        <item
+            android:id="@+id/credit_shop"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="积分商城" />
+        <item
+            android:id="@+id/setting"
+            android:icon="@drawable/ic_menu_settings"
+            android:title="设置" />
+    </group>
+
+
+</menu>

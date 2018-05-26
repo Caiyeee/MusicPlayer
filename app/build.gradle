@@ -1,0 +1,69 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
+    defaultConfig {
+        applicationId "com.example.christ.musicplayer"
+        minSdkVersion 20
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+//        ndk {
+//            moduleName "mp3lame" //设置.so文件名称
+//            ldLibs "log"
+//            abiFilters "armeabi", "armeabi-v7a", "x86"
+//        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+//    sourceSets.main{
+//            jni.srcDirs=['../jni']
+//        }
+    productFlavors {
+        arm {
+            ndk {
+                abiFilters "armeabi-v7a", "armeabi"
+            }
+        }
+        x86 {
+            ndk {
+                abiFilter "x86"
+            }
+        }
+    }
+
+    sourceSets{
+        main{
+            jni.srcDirs = []
+            jniLibs.srcDirs=['src/main/jniLibs']  // jniLib.srcDirs定义了Gradle在哪里寻找生成的so库文件
+        }
+    }
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support:design:26.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:support-v4:26.+'
+    compile 'jp.wasabeef:recyclerview-animators:2.2.7'
+    testCompile 'junit:junit:4.12'
+    compile 'com.github.adrielcafe:AndroidAudioConverter:0.0.8'
+    compile 'com.github.adrielcafe:AndroidAudioRecorder:0.3.0'
+    compile 'io.reactivex:rxjava:1.1.0'
+    compile 'io.reactivex:rxandroid:1.1.0'
+    //    compile 'io.reactivex.rxjava2:rxjava:2.1.1'
+    //    compile 'com.github.piasy:rxandroidaudio:1.5.2'
+    //    compile 'com.github.piasy:AudioProcessor:1.5.2'
+    compile'org.greenrobot:eventbus:3.0.0'
+}
