@@ -8,5 +8,5 @@
 #####
 ##### 录音结束后自动命名并保存，命名方式：原歌名 + “-record” + 用户id，例如“songName-record1”
 ###
-###### Screentshots
-![](https://github.com/Caiyeee/MusicPlayer/raw/screentshots/pic1.png)
+##### Screentshots
+![截图1](https://github.com/Caiyeee/MusicPlayer/raw/screentshots/pic1.png)
